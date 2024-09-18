@@ -1,86 +1,17 @@
-/* .navbar {
-    border-bottom: 1px solid #cb1f1f;
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
-    border-radius: 50px;
-    margin: 8px 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-}
-
-.brand-name {
-    font-size: 1.75rem;
-    font-weight: bold;
-}
-
-.nav-link {
-    font-size: 1rem;
-}
-
-.navbar-nav .nav-link {
-    margin-left: 15px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #f8f9fa;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #007bff;
-}
-
-.navbar-dark .navbar-brand {
-    color: #f8f9fa;
-}
-
-.navbar-dark .navbar-brand:hover {
-    color: #007bff;
-}
-
-.search-form {
-    display: flex;
-    align-items: center;
-}
-
-.search-input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.search-input {
-    padding-right: 30px;
-    border-radius: 20px;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.search-icon {
-    position: absolute;
-    right: 10px;
-    color: rgb(201, 196, 196);
-    pointer-events: none;
-}
-.brand-icon
-{
-    font-size: 45px;
-} */
-
-
 .header {
     margin: 0 2.5rem;
     padding: .5rem 0;
     align-items: center;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .headerLeft, .headerRight {
     display: flex;
     align-items: center;
-
 }
 
-a > span{
+a > span {
     margin: 0 30px;
     font-size: 1.3rem;
     cursor: pointer;
@@ -100,3 +31,39 @@ a > span:hover {
     font-size: 2rem;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .headerLeft {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header__icon {
+        width: 60px; /* Reduce logo size */
+        margin-bottom: 0px;
+    }
+
+    .header a > span {
+        margin: 0 15px; /* Reduce link spacing */
+        font-size: 1.1rem; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: .5rem 0;
+    }
+
+    .header__icon {
+        width: 40px; /* Further reduce logo size */
+    }
+
+    .header a > span {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+}
